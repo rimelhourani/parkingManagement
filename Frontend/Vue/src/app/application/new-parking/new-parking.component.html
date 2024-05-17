@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="new-parking.component.css">
+    <link rel="stylesheet" href="new-parking.component.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#">My Parking</a>
+                </div>
+                <ul class="sidebar-nav">
+                    
+                    <li class="sidebar-item">
+                        <a href="../new home page/index.html" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../parking/parking.html" class="sidebar-link"><i class="fa-solid fa-gear"></i>
+                            Manage parkings
+                        </a>
+                       
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../slotParking/index.html" class="sidebar-link"><i class="fa-solid fa-car"></i>
+                            Parking slot
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-shield-halved"></i>
+                            Sercurity 
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                          
+                            <li class="sidebar-item">
+                                <a href="../password reset/index.html" class="sidebar-link"><i class="fa-solid fa-key"></i>Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>  
+                    <li class="sidebar-item">
+                        <a href="../Reservation/index.html" class="sidebar-link"><i class="fa-solid fa-traffic-light"></i>
+                            Manage reservations
+                        </a>
+                   
+                    </li>
+                </ul>
+            </div>
+        </aside>
+   <!-- profile part -->
+
+        <div class="main" >
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="../new home page/image/profile.jpg" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">Profile</a>
+                                <a href="#" class="dropdown-item">Setting</a>
+                                <a href="../login page/index.html" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2" id="content">
+            
+                <div class="container">
+                    <h1>Add Parking</h1>
+                    <form  [formGroup]="parkingForm">
+                        <div class="form-group"  >
+                            <label for="parkingName">Nom de parking:</label>
+                            <input type="text"name="parkingName" required  formControlName="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="parkingLocation">Localisation de parking:</label>
+                            <input type="text"  name="parkingLocation" formControlName="adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="parkingCapacity">capacité de parking:</label>
+                            <input type="text"  name="parkingCapacity" required formControlName="capacite">
+                        </div>
+                        <div class="form-group">
+                            <label for="parkingRate">Tarif de stationnement (par heure):</label>
+                            <input type="text"  name="parkingRate" required formControlName="ParkingRate">
+                        </div>
+                        <div class="form-group">
+                            <label for="owner">Propriétaire:</label>
+                            <input type="text"  name="owner" required formControlName="user">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telephone:</label>
+                            <input type="tel"  name="phone" required formControlName="telephone">
+                        </div>
+                        <div class="form-group">
+                            <label for="timeStart">Heure de début:</label>
+                            <input type="time"  name="timeStart" required formControlName="timeStart">
+                        </div>
+                        <div class="form-group">
+                            <label for="timeFinish">Heure de fin:</label>
+                            <input type="time"  name="timeFinish" required formControlName="timeFinish">
+                        </div>
+                        <button type="submit" (click)="AjouterParking()">Ajouter Parking</button>
+                    </form>
+
+                </div>
+ 
+            </main>
+            <a href="#" class="theme-toggle">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-regular fa-sun"></i>
+            </a>
+           
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#parkingForm').submit(function(e) {
+                e.preventDefault();
+                alert('Parking form submitted successfully!');
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="../new home page/js/script.js"></script>
+</body>
+
+</html>
+

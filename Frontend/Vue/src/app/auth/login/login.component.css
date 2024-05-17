@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+    
+    
+  
+}
+body{
+    resize: both;
+    overflow: auto;
+}
+
+.loginForm{
+    background-color: white;
+    border-radius: 30px;
+    padding:20px;
+    width: 400px;
+    height: auto;
+    align-items: center;
+}
+.loginForm h3{
+    font-size: 40;
+    text-align: center;
+
+}
+img{
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+.section1{
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-radius: 30px;
+    
+    background-color:rgba(220, 242, 241, 1);
+}
+.photoAndBolbs{
+
+
+}
+
+
+.blobs{
+   
+    width: 400px;
+    height: auto;
+    border-radius: 95% 47% 91% 55% / 94% 37% 49% 38%;
+    background-color:#2AA6A7;
+    margin-right: 10px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+}
+.blob1{
+    margin-right: 60px;
+    margin-left: 20px;
+    border-top-left-radius: 50% 70%;
+    border-top-right-radius: 90% 60%;
+    border-bottom-right-radius: 40% 50%;
+    border-bottom-left-radius: 60% 10%;
+    border-radius: 48% 105% 28% 77% / 68% 108% 59% 102%;
+
+
+
+    
+    background-color: #9AD0C2;
+
+}
+input[type="email"],input[type="password"],.btn{
+    background-color: #365486;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 35px;
+    width: 250px;
+    padding: 5px;
+    border-color: white;
+    border: 1rem;
+    
+}
+label{
+   font-size: 24px;
+}
+a{text-decoration: none;
+    
+}
+.anchor{
+    padding: 80px;
+    margin-bottom: 20px;
+}
+form{
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.btn{
+    color: white;
+    
+    height: 35px;
+    background:#365486;
+
+    border: none;
+    outline: none;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    
+    font-weight: 400;
+   
+     display: block;
+   
+}
+/*.Or{
+    padding: 6.875rem;
+}*/
+.lb{
+    font-size:small;
+}
+.sigup a{
+    padding-left: 0px;
+}
